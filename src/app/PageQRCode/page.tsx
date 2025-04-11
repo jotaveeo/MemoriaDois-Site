@@ -14,7 +14,8 @@ export default function CartaAmada(): React.ReactElement {
   const [formData, setFormData] = useState({
     nome1: "João",
     nome2: "Beatriz",
-    historia: "Desde o dia que te conheci, minha vida mudou...",
+    historia:
+      "Nos conhecemos em um café e desde então não nos separamos mais. Cada dia ao seu lado é uma nova aventura.",
     fotos: ["/eu (1).jpg", "/eu (2).jpg", "/eu (3).jpg", "/eu (4).jpg"],
     dataInicio: "2023-01-01",
     datasImportantes: [
@@ -46,13 +47,6 @@ export default function CartaAmada(): React.ReactElement {
     const interval = setInterval(calcularTempo, 1000);
     return () => clearInterval(interval);
   }, [formData.dataInicio]);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setShowCarta(true), 4000);
-    return () => clearTimeout(timeout);
-  }, []);
-
-  // Animação da frase em movimento e desaparecendo com fade
 
   return (
     <AnimatePresence mode="wait">

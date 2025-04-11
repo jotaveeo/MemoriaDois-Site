@@ -86,7 +86,7 @@ const Formulario: React.FC<FormularioProps> = ({ onSubmit }) => {
       <h2 className="text-4xl font-bold text-center mb-8">
         Preencha o Formulário
       </h2>
-      <div className="flex flex-col md:flex-row gap-10">
+      <div className="flex flex-col gap-10">
         {/* Formulário */}
         <Card className="max-w-lg bg-white p-6 rounded-lg shadow-md flex-1">
           <form onSubmit={handleSubmit}>
@@ -170,63 +170,6 @@ const Formulario: React.FC<FormularioProps> = ({ onSubmit }) => {
             />
             <Button type="submit">Enviar</Button>
           </form>
-        </Card>
-
-        {/* Pré-visualização */}
-        <Card className="flex-1 bg-white p-6 rounded-lg shadow-md max-w-xs mx-auto">
-          <h3 className="text-2xl font-bold mb-4 text-center">
-            Pré-visualização
-          </h3>
-          <p>
-            <strong>Seu nome:</strong> {formData.nome1}
-          </p>
-          <p>
-            <strong>Nome da pessoa amada:</strong> {formData.nome2}
-          </p>
-          <p>
-            <strong>Data de início:</strong>{" "}
-            {formData.dataInicio
-              ? new Intl.DateTimeFormat("pt-BR", {
-                  day: "2-digit",
-                  month: "2-digit",
-                  year: "numeric",
-                }).format(new Date(formData.dataInicio))
-              : ""}
-          </p>
-          <p>
-            <strong>Horário de início:</strong> {formData.horarioInicio}
-          </p>
-          <p>
-            <strong>História:</strong> {formData.historia}
-          </p>
-          <p>
-            <strong>Datas importantes:</strong>
-          </p>
-          <ul className="list-disc pl-5">
-            {formData.datasImportantes.map((item, index) => (
-              <li key={index}>
-                {new Intl.DateTimeFormat("pt-BR", {
-                  day: "2-digit",
-                  month: "2-digit",
-                  year: "numeric",
-                }).format(new Date(item.data))}{" "}
-                - {item.descricao}
-              </li>
-            ))}
-          </ul>
-          <p>
-            <strong>Fotos:</strong>
-          </p>
-          <div className="flex gap-2 flex-wrap">
-            {formData.fotos.map((file, index) => (
-              <img
-                key={index}
-                src={URL.createObjectURL(file)}
-                alt={`Foto ${index + 1}`}
-                className="w-20 h-20 object-cover rounded-lg"
-              />
-            ))}
-          </div>
         </Card>
       </div>
     </section>
