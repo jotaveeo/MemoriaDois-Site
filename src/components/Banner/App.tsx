@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const Banner: React.FC = () => {
@@ -21,7 +22,14 @@ const Banner: React.FC = () => {
       {/* Espaço para a imagem do banner */}
       <div className="banner-image w-full md:w-1/2 flex items-center justify-center">
         {/* Placeholder para a imagem */}
-        <img src="./casak.png" alt="foto" />
+        <Image
+          src="/casak.png"
+          alt="foto"
+          width={400}
+          height={400}
+          className="rounded-lg"
+          priority
+        />
       </div>
 
       {/* Texto do banner */}

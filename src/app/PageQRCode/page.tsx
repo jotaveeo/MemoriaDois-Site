@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/card";
 import { TempoJuntos } from "@/components/CarrTempoJun/App";
 
 export default function CartaAmada(): React.ReactElement {
-  const [formData, setFormData] = useState({
+  const [formData] = useState({
     nome1: "João",
     nome2: "Beatriz",
     historia: "Desde o dia que te conheci, minha vida mudou...",
