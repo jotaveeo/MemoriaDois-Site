@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Card } from "@/components/ui/card";
 import Formulario, { FormData } from "@/components/Form/App";
 
 export default function App(): React.ReactElement {

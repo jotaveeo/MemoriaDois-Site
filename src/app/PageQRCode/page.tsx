@@ -1,10 +1,10 @@
 // pages/CartaAmada.tsx
 "use client";
 import React, { useEffect, useState } from "react";
-import { Card } from "@/components/ui/card";
 import FotoCarrossel from "@/components/Carrosel/App";
 import { Mensagem } from "@/components/CarrMensagem/App";
 import { LinhaDoTempo } from "@/components/CarrLinhaTemp/App";
+import { Card } from "@/components/ui/card";
 import { TempoJuntos } from "@/components/CarrTempoJun/App";
 
 export default function CartaAmada(): React.ReactElement {
